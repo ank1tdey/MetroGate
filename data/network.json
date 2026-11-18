@@ -1,0 +1,1182 @@
+{
+  "datasetVersion": "0.2.0",
+  "lastReviewed": "2026-11-18",
+  "notice": "Research starter dataset. Verify each station, service section, and interchange against current official Metro Railway notices before relying on it for a real journey.",
+  "lines": [
+    {
+      "id": "blue",
+      "name": "Blue Line",
+      "color": "#2878E5",
+      "from": "Dakshineswar",
+      "to": "Kavi Subhash",
+      "directionA": "Towards Kavi Subhash",
+      "directionB": "Towards Dakshineswar",
+      "stations": [
+        "Dakshineswar",
+        "Baranagar",
+        "Noapara",
+        "Dum Dum",
+        "Belgachia",
+        "Shyambazar",
+        "Shobhabazar Sutanuti",
+        "Girish Park",
+        "Mahatma Gandhi Road",
+        "Central",
+        "Chandni Chowk",
+        "Esplanade",
+        "Park Street",
+        "Maidan",
+        "Rabindra Sadan",
+        "Netaji Bhavan",
+        "Jatin Das Park",
+        "Kalighat",
+        "Rabindra Sarobar",
+        "Mahanayak Uttam Kumar",
+        "Netaji",
+        "Masterda Surya Sen",
+        "Gitanjali",
+        "Kavi Nazrul",
+        "Shahid Khudiram",
+        "Kavi Subhash"
+      ],
+      "note": "Blue Line station sequence. Confirm terminal/platform operating notices before travel; Kavi Subhash service status can be affected by works.",
+      "stationIds": [
+        "blue_0",
+        "blue_1",
+        "hub_noapara_blue",
+        "blue_3",
+        "blue_4",
+        "blue_5",
+        "blue_6",
+        "blue_7",
+        "blue_8",
+        "blue_9",
+        "blue_10",
+        "hub_esplanade_blue",
+        "blue_12",
+        "blue_13",
+        "blue_14",
+        "blue_15",
+        "blue_16",
+        "blue_17",
+        "blue_18",
+        "blue_19",
+        "blue_20",
+        "blue_21",
+        "blue_22",
+        "blue_23",
+        "blue_24",
+        "hub_kavi_subhash_blue"
+      ]
+    },
+    {
+      "id": "green",
+      "name": "Green Line",
+      "color": "#159765",
+      "from": "Howrah Maidan",
+      "to": "Salt Lake Sector V",
+      "directionA": "Towards Salt Lake Sector V",
+      "directionB": "Towards Howrah Maidan",
+      "stations": [
+        "Howrah Maidan",
+        "Howrah",
+        "Mahakaran",
+        "Esplanade",
+        "Sealdah",
+        "Phoolbagan",
+        "Salt Lake Stadium",
+        "Bengal Chemical",
+        "City Centre",
+        "Central Park",
+        "Karunamoyee",
+        "Salt Lake Sector V"
+      ],
+      "note": "East–West corridor commissioned in stages through 2025.",
+      "stationIds": [
+        "green_0",
+        "green_1",
+        "green_2",
+        "hub_esplanade_green",
+        "green_4",
+        "green_5",
+        "green_6",
+        "green_7",
+        "green_8",
+        "green_9",
+        "green_10",
+        "green_11"
+      ]
+    },
+    {
+      "id": "purple",
+      "name": "Purple Line",
+      "color": "#9B5BC7",
+      "from": "Joka",
+      "to": "Majerhat",
+      "directionA": "Towards Majerhat",
+      "directionB": "Towards Joka",
+      "stations": [
+        "Joka",
+        "Thakurpukur",
+        "Sakherbazar",
+        "Behala Chowrasta",
+        "Behala Bazar",
+        "Taratala",
+        "Majerhat"
+      ],
+      "note": "Joka–Majerhat commissioned section. Extension towards Esplanade is not included as operational.",
+      "stationIds": [
+        "purple_0",
+        "purple_1",
+        "purple_2",
+        "purple_3",
+        "purple_4",
+        "purple_5",
+        "purple_6"
+      ]
+    },
+    {
+      "id": "orange",
+      "name": "Orange Line",
+      "color": "#E58A35",
+      "from": "Kavi Subhash",
+      "to": "Beleghata",
+      "directionA": "Towards Beleghata",
+      "directionB": "Towards Kavi Subhash",
+      "stations": [
+        "Kavi Subhash",
+        "Satyajit Ray",
+        "Jyotirindra Nandy",
+        "Kavi Sukanta",
+        "Hemanta Mukherjee",
+        "VIP Bazar",
+        "Ritwik Ghatak",
+        "Barun Sengupta",
+        "Beleghata"
+      ],
+      "note": "New Garia–Beleghata commissioned section. Do not assume onward extension to Sector V is open.",
+      "stationIds": [
+        "hub_kavi_subhash_orange",
+        "orange_1",
+        "orange_2",
+        "orange_3",
+        "orange_4",
+        "orange_5",
+        "orange_6",
+        "orange_7",
+        "orange_8"
+      ]
+    },
+    {
+      "id": "yellow",
+      "name": "Yellow Line",
+      "color": "#D7AA24",
+      "from": "Noapara",
+      "to": "Jai Hind Bimanbandar",
+      "directionA": "Towards Jai Hind Bimanbandar",
+      "directionB": "Towards Noapara",
+      "stations": [
+        "Noapara",
+        "Dum Dum Cantonment",
+        "Jessore Road",
+        "Jai Hind Bimanbandar"
+      ],
+      "note": "Noapara–Jai Hind Bimanbandar commissioned section.",
+      "stationIds": [
+        "hub_noapara_yellow",
+        "yellow_1",
+        "yellow_2",
+        "yellow_3"
+      ]
+    }
+  ],
+  "stations": [
+    {
+      "id": "blue_0",
+      "name": "Dakshineswar",
+      "lineId": "blue",
+      "sequence": 0,
+      "status": "operational",
+      "coordinates": null
+    },
+    {
+      "id": "blue_1",
+      "name": "Baranagar",
+      "lineId": "blue",
+      "sequence": 1,
+      "status": "operational",
+      "coordinates": null
+    },
+    {
+      "id": "hub_noapara_blue",
+      "name": "Noapara",
+      "lineId": "blue",
+      "sequence": 2,
+      "status": "operational",
+      "coordinates": null
+    },
+    {
+      "id": "blue_3",
+      "name": "Dum Dum",
+      "lineId": "blue",
+      "sequence": 3,
+      "status": "operational",
+      "coordinates": null
+    },
+    {
+      "id": "blue_4",
+      "name": "Belgachia",
+      "lineId": "blue",
+      "sequence": 4,
+      "status": "operational",
+      "coordinates": null
+    },
+    {
+      "id": "blue_5",
+      "name": "Shyambazar",
+      "lineId": "blue",
+      "sequence": 5,
+      "status": "operational",
+      "coordinates": null
+    },
+    {
+      "id": "blue_6",
+      "name": "Shobhabazar Sutanuti",
+      "lineId": "blue",
+      "sequence": 6,
+      "status": "operational",
+      "coordinates": null
+    },
+    {
+      "id": "blue_7",
+      "name": "Girish Park",
+      "lineId": "blue",
+      "sequence": 7,
+      "status": "operational",
+      "coordinates": null
+    },
+    {
+      "id": "blue_8",
+      "name": "Mahatma Gandhi Road",
+      "lineId": "blue",
+      "sequence": 8,
+      "status": "operational",
+      "coordinates": null
+    },
+    {
+      "id": "blue_9",
+      "name": "Central",
+      "lineId": "blue",
+      "sequence": 9,
+      "status": "operational",
+      "coordinates": null
+    },
+    {
+      "id": "blue_10",
+      "name": "Chandni Chowk",
+      "lineId": "blue",
+      "sequence": 10,
+      "status": "operational",
+      "coordinates": null
+    },
+    {
+      "id": "hub_esplanade_blue",
+      "name": "Esplanade",
+      "lineId": "blue",
+      "sequence": 11,
+      "status": "operational",
+      "coordinates": null
+    },
+    {
+      "id": "blue_12",
+      "name": "Park Street",
+      "lineId": "blue",
+      "sequence": 12,
+      "status": "operational",
+      "coordinates": null
+    },
+    {
+      "id": "blue_13",
+      "name": "Maidan",
+      "lineId": "blue",
+      "sequence": 13,
+      "status": "operational",
+      "coordinates": null
+    },
+    {
+      "id": "blue_14",
+      "name": "Rabindra Sadan",
+      "lineId": "blue",
+      "sequence": 14,
+      "status": "operational",
+      "coordinates": null
+    },
+    {
+      "id": "blue_15",
+      "name": "Netaji Bhavan",
+      "lineId": "blue",
+      "sequence": 15,
+      "status": "operational",
+      "coordinates": null
+    },
+    {
+      "id": "blue_16",
+      "name": "Jatin Das Park",
+      "lineId": "blue",
+      "sequence": 16,
+      "status": "operational",
+      "coordinates": null
+    },
+    {
+      "id": "blue_17",
+      "name": "Kalighat",
+      "lineId": "blue",
+      "sequence": 17,
+      "status": "operational",
+      "coordinates": null
+    },
+    {
+      "id": "blue_18",
+      "name": "Rabindra Sarobar",
+      "lineId": "blue",
+      "sequence": 18,
+      "status": "operational",
+      "coordinates": null
+    },
+    {
+      "id": "blue_19",
+      "name": "Mahanayak Uttam Kumar",
+      "lineId": "blue",
+      "sequence": 19,
+      "status": "operational",
+      "coordinates": null
+    },
+    {
+      "id": "blue_20",
+      "name": "Netaji",
+      "lineId": "blue",
+      "sequence": 20,
+      "status": "operational",
+      "coordinates": null
+    },
+    {
+      "id": "blue_21",
+      "name": "Masterda Surya Sen",
+      "lineId": "blue",
+      "sequence": 21,
+      "status": "operational",
+      "coordinates": null
+    },
+    {
+      "id": "blue_22",
+      "name": "Gitanjali",
+      "lineId": "blue",
+      "sequence": 22,
+      "status": "operational",
+      "coordinates": null
+    },
+    {
+      "id": "blue_23",
+      "name": "Kavi Nazrul",
+      "lineId": "blue",
+      "sequence": 23,
+      "status": "operational",
+      "coordinates": null
+    },
+    {
+      "id": "blue_24",
+      "name": "Shahid Khudiram",
+      "lineId": "blue",
+      "sequence": 24,
+      "status": "operational",
+      "coordinates": null
+    },
+    {
+      "id": "hub_kavi_subhash_blue",
+      "name": "Kavi Subhash",
+      "lineId": "blue",
+      "sequence": 25,
+      "status": "operational",
+      "coordinates": null
+    },
+    {
+      "id": "green_0",
+      "name": "Howrah Maidan",
+      "lineId": "green",
+      "sequence": 0,
+      "status": "operational",
+      "coordinates": null
+    },
+    {
+      "id": "green_1",
+      "name": "Howrah",
+      "lineId": "green",
+      "sequence": 1,
+      "status": "operational",
+      "coordinates": null
+    },
+    {
+      "id": "green_2",
+      "name": "Mahakaran",
+      "lineId": "green",
+      "sequence": 2,
+      "status": "operational",
+      "coordinates": null
+    },
+    {
+      "id": "hub_esplanade_green",
+      "name": "Esplanade",
+      "lineId": "green",
+      "sequence": 3,
+      "status": "operational",
+      "coordinates": null
+    },
+    {
+      "id": "green_4",
+      "name": "Sealdah",
+      "lineId": "green",
+      "sequence": 4,
+      "status": "operational",
+      "coordinates": null
+    },
+    {
+      "id": "green_5",
+      "name": "Phoolbagan",
+      "lineId": "green",
+      "sequence": 5,
+      "status": "operational",
+      "coordinates": null
+    },
+    {
+      "id": "green_6",
+      "name": "Salt Lake Stadium",
+      "lineId": "green",
+      "sequence": 6,
+      "status": "operational",
+      "coordinates": null
+    },
+    {
+      "id": "green_7",
+      "name": "Bengal Chemical",
+      "lineId": "green",
+      "sequence": 7,
+      "status": "operational",
+      "coordinates": null
+    },
+    {
+      "id": "green_8",
+      "name": "City Centre",
+      "lineId": "green",
+      "sequence": 8,
+      "status": "operational",
+      "coordinates": null
+    },
+    {
+      "id": "green_9",
+      "name": "Central Park",
+      "lineId": "green",
+      "sequence": 9,
+      "status": "operational",
+      "coordinates": null
+    },
+    {
+      "id": "green_10",
+      "name": "Karunamoyee",
+      "lineId": "green",
+      "sequence": 10,
+      "status": "operational",
+      "coordinates": null
+    },
+    {
+      "id": "green_11",
+      "name": "Salt Lake Sector V",
+      "lineId": "green",
+      "sequence": 11,
+      "status": "operational",
+      "coordinates": null
+    },
+    {
+      "id": "purple_0",
+      "name": "Joka",
+      "lineId": "purple",
+      "sequence": 0,
+      "status": "operational",
+      "coordinates": null
+    },
+    {
+      "id": "purple_1",
+      "name": "Thakurpukur",
+      "lineId": "purple",
+      "sequence": 1,
+      "status": "operational",
+      "coordinates": null
+    },
+    {
+      "id": "purple_2",
+      "name": "Sakherbazar",
+      "lineId": "purple",
+      "sequence": 2,
+      "status": "operational",
+      "coordinates": null
+    },
+    {
+      "id": "purple_3",
+      "name": "Behala Chowrasta",
+      "lineId": "purple",
+      "sequence": 3,
+      "status": "operational",
+      "coordinates": null
+    },
+    {
+      "id": "purple_4",
+      "name": "Behala Bazar",
+      "lineId": "purple",
+      "sequence": 4,
+      "status": "operational",
+      "coordinates": null
+    },
+    {
+      "id": "purple_5",
+      "name": "Taratala",
+      "lineId": "purple",
+      "sequence": 5,
+      "status": "operational",
+      "coordinates": null
+    },
+    {
+      "id": "purple_6",
+      "name": "Majerhat",
+      "lineId": "purple",
+      "sequence": 6,
+      "status": "operational",
+      "coordinates": null
+    },
+    {
+      "id": "hub_kavi_subhash_orange",
+      "name": "Kavi Subhash",
+      "lineId": "orange",
+      "sequence": 0,
+      "status": "operational",
+      "coordinates": null
+    },
+    {
+      "id": "orange_1",
+      "name": "Satyajit Ray",
+      "lineId": "orange",
+      "sequence": 1,
+      "status": "operational",
+      "coordinates": null
+    },
+    {
+      "id": "orange_2",
+      "name": "Jyotirindra Nandy",
+      "lineId": "orange",
+      "sequence": 2,
+      "status": "operational",
+      "coordinates": null
+    },
+    {
+      "id": "orange_3",
+      "name": "Kavi Sukanta",
+      "lineId": "orange",
+      "sequence": 3,
+      "status": "operational",
+      "coordinates": null
+    },
+    {
+      "id": "orange_4",
+      "name": "Hemanta Mukherjee",
+      "lineId": "orange",
+      "sequence": 4,
+      "status": "operational",
+      "coordinates": null
+    },
+    {
+      "id": "orange_5",
+      "name": "VIP Bazar",
+      "lineId": "orange",
+      "sequence": 5,
+      "status": "operational",
+      "coordinates": null
+    },
+    {
+      "id": "orange_6",
+      "name": "Ritwik Ghatak",
+      "lineId": "orange",
+      "sequence": 6,
+      "status": "operational",
+      "coordinates": null
+    },
+    {
+      "id": "orange_7",
+      "name": "Barun Sengupta",
+      "lineId": "orange",
+      "sequence": 7,
+      "status": "operational",
+      "coordinates": null
+    },
+    {
+      "id": "orange_8",
+      "name": "Beleghata",
+      "lineId": "orange",
+      "sequence": 8,
+      "status": "operational",
+      "coordinates": null
+    },
+    {
+      "id": "hub_noapara_yellow",
+      "name": "Noapara",
+      "lineId": "yellow",
+      "sequence": 0,
+      "status": "operational",
+      "coordinates": null
+    },
+    {
+      "id": "yellow_1",
+      "name": "Dum Dum Cantonment",
+      "lineId": "yellow",
+      "sequence": 1,
+      "status": "operational",
+      "coordinates": null
+    },
+    {
+      "id": "yellow_2",
+      "name": "Jessore Road",
+      "lineId": "yellow",
+      "sequence": 2,
+      "status": "operational",
+      "coordinates": null
+    },
+    {
+      "id": "yellow_3",
+      "name": "Jai Hind Bimanbandar",
+      "lineId": "yellow",
+      "sequence": 3,
+      "status": "operational",
+      "coordinates": null
+    }
+  ],
+  "connections": [
+    {
+      "id": "blue_0_1",
+      "from": "blue_0",
+      "to": "blue_1",
+      "lineId": "blue",
+      "status": "operational",
+      "directionForward": "Towards Kavi Subhash",
+      "directionReverse": "Towards Dakshineswar"
+    },
+    {
+      "id": "blue_1_2",
+      "from": "blue_1",
+      "to": "hub_noapara_blue",
+      "lineId": "blue",
+      "status": "operational",
+      "directionForward": "Towards Kavi Subhash",
+      "directionReverse": "Towards Dakshineswar"
+    },
+    {
+      "id": "blue_2_3",
+      "from": "hub_noapara_blue",
+      "to": "blue_3",
+      "lineId": "blue",
+      "status": "operational",
+      "directionForward": "Towards Kavi Subhash",
+      "directionReverse": "Towards Dakshineswar"
+    },
+    {
+      "id": "blue_3_4",
+      "from": "blue_3",
+      "to": "blue_4",
+      "lineId": "blue",
+      "status": "operational",
+      "directionForward": "Towards Kavi Subhash",
+      "directionReverse": "Towards Dakshineswar"
+    },
+    {
+      "id": "blue_4_5",
+      "from": "blue_4",
+      "to": "blue_5",
+      "lineId": "blue",
+      "status": "operational",
+      "directionForward": "Towards Kavi Subhash",
+      "directionReverse": "Towards Dakshineswar"
+    },
+    {
+      "id": "blue_5_6",
+      "from": "blue_5",
+      "to": "blue_6",
+      "lineId": "blue",
+      "status": "operational",
+      "directionForward": "Towards Kavi Subhash",
+      "directionReverse": "Towards Dakshineswar"
+    },
+    {
+      "id": "blue_6_7",
+      "from": "blue_6",
+      "to": "blue_7",
+      "lineId": "blue",
+      "status": "operational",
+      "directionForward": "Towards Kavi Subhash",
+      "directionReverse": "Towards Dakshineswar"
+    },
+    {
+      "id": "blue_7_8",
+      "from": "blue_7",
+      "to": "blue_8",
+      "lineId": "blue",
+      "status": "operational",
+      "directionForward": "Towards Kavi Subhash",
+      "directionReverse": "Towards Dakshineswar"
+    },
+    {
+      "id": "blue_8_9",
+      "from": "blue_8",
+      "to": "blue_9",
+      "lineId": "blue",
+      "status": "operational",
+      "directionForward": "Towards Kavi Subhash",
+      "directionReverse": "Towards Dakshineswar"
+    },
+    {
+      "id": "blue_9_10",
+      "from": "blue_9",
+      "to": "blue_10",
+      "lineId": "blue",
+      "status": "operational",
+      "directionForward": "Towards Kavi Subhash",
+      "directionReverse": "Towards Dakshineswar"
+    },
+    {
+      "id": "blue_10_11",
+      "from": "blue_10",
+      "to": "hub_esplanade_blue",
+      "lineId": "blue",
+      "status": "operational",
+      "directionForward": "Towards Kavi Subhash",
+      "directionReverse": "Towards Dakshineswar"
+    },
+    {
+      "id": "blue_11_12",
+      "from": "hub_esplanade_blue",
+      "to": "blue_12",
+      "lineId": "blue",
+      "status": "operational",
+      "directionForward": "Towards Kavi Subhash",
+      "directionReverse": "Towards Dakshineswar"
+    },
+    {
+      "id": "blue_12_13",
+      "from": "blue_12",
+      "to": "blue_13",
+      "lineId": "blue",
+      "status": "operational",
+      "directionForward": "Towards Kavi Subhash",
+      "directionReverse": "Towards Dakshineswar"
+    },
+    {
+      "id": "blue_13_14",
+      "from": "blue_13",
+      "to": "blue_14",
+      "lineId": "blue",
+      "status": "operational",
+      "directionForward": "Towards Kavi Subhash",
+      "directionReverse": "Towards Dakshineswar"
+    },
+    {
+      "id": "blue_14_15",
+      "from": "blue_14",
+      "to": "blue_15",
+      "lineId": "blue",
+      "status": "operational",
+      "directionForward": "Towards Kavi Subhash",
+      "directionReverse": "Towards Dakshineswar"
+    },
+    {
+      "id": "blue_15_16",
+      "from": "blue_15",
+      "to": "blue_16",
+      "lineId": "blue",
+      "status": "operational",
+      "directionForward": "Towards Kavi Subhash",
+      "directionReverse": "Towards Dakshineswar"
+    },
+    {
+      "id": "blue_16_17",
+      "from": "blue_16",
+      "to": "blue_17",
+      "lineId": "blue",
+      "status": "operational",
+      "directionForward": "Towards Kavi Subhash",
+      "directionReverse": "Towards Dakshineswar"
+    },
+    {
+      "id": "blue_17_18",
+      "from": "blue_17",
+      "to": "blue_18",
+      "lineId": "blue",
+      "status": "operational",
+      "directionForward": "Towards Kavi Subhash",
+      "directionReverse": "Towards Dakshineswar"
+    },
+    {
+      "id": "blue_18_19",
+      "from": "blue_18",
+      "to": "blue_19",
+      "lineId": "blue",
+      "status": "operational",
+      "directionForward": "Towards Kavi Subhash",
+      "directionReverse": "Towards Dakshineswar"
+    },
+    {
+      "id": "blue_19_20",
+      "from": "blue_19",
+      "to": "blue_20",
+      "lineId": "blue",
+      "status": "operational",
+      "directionForward": "Towards Kavi Subhash",
+      "directionReverse": "Towards Dakshineswar"
+    },
+    {
+      "id": "blue_20_21",
+      "from": "blue_20",
+      "to": "blue_21",
+      "lineId": "blue",
+      "status": "operational",
+      "directionForward": "Towards Kavi Subhash",
+      "directionReverse": "Towards Dakshineswar"
+    },
+    {
+      "id": "blue_21_22",
+      "from": "blue_21",
+      "to": "blue_22",
+      "lineId": "blue",
+      "status": "operational",
+      "directionForward": "Towards Kavi Subhash",
+      "directionReverse": "Towards Dakshineswar"
+    },
+    {
+      "id": "blue_22_23",
+      "from": "blue_22",
+      "to": "blue_23",
+      "lineId": "blue",
+      "status": "operational",
+      "directionForward": "Towards Kavi Subhash",
+      "directionReverse": "Towards Dakshineswar"
+    },
+    {
+      "id": "blue_23_24",
+      "from": "blue_23",
+      "to": "blue_24",
+      "lineId": "blue",
+      "status": "operational",
+      "directionForward": "Towards Kavi Subhash",
+      "directionReverse": "Towards Dakshineswar"
+    },
+    {
+      "id": "blue_24_25",
+      "from": "blue_24",
+      "to": "hub_kavi_subhash_blue",
+      "lineId": "blue",
+      "status": "operational",
+      "directionForward": "Towards Kavi Subhash",
+      "directionReverse": "Towards Dakshineswar"
+    },
+    {
+      "id": "green_0_1",
+      "from": "green_0",
+      "to": "green_1",
+      "lineId": "green",
+      "status": "operational",
+      "directionForward": "Towards Salt Lake Sector V",
+      "directionReverse": "Towards Howrah Maidan"
+    },
+    {
+      "id": "green_1_2",
+      "from": "green_1",
+      "to": "green_2",
+      "lineId": "green",
+      "status": "operational",
+      "directionForward": "Towards Salt Lake Sector V",
+      "directionReverse": "Towards Howrah Maidan"
+    },
+    {
+      "id": "green_2_3",
+      "from": "green_2",
+      "to": "hub_esplanade_green",
+      "lineId": "green",
+      "status": "operational",
+      "directionForward": "Towards Salt Lake Sector V",
+      "directionReverse": "Towards Howrah Maidan"
+    },
+    {
+      "id": "green_3_4",
+      "from": "hub_esplanade_green",
+      "to": "green_4",
+      "lineId": "green",
+      "status": "operational",
+      "directionForward": "Towards Salt Lake Sector V",
+      "directionReverse": "Towards Howrah Maidan"
+    },
+    {
+      "id": "green_4_5",
+      "from": "green_4",
+      "to": "green_5",
+      "lineId": "green",
+      "status": "operational",
+      "directionForward": "Towards Salt Lake Sector V",
+      "directionReverse": "Towards Howrah Maidan"
+    },
+    {
+      "id": "green_5_6",
+      "from": "green_5",
+      "to": "green_6",
+      "lineId": "green",
+      "status": "operational",
+      "directionForward": "Towards Salt Lake Sector V",
+      "directionReverse": "Towards Howrah Maidan"
+    },
+    {
+      "id": "green_6_7",
+      "from": "green_6",
+      "to": "green_7",
+      "lineId": "green",
+      "status": "operational",
+      "directionForward": "Towards Salt Lake Sector V",
+      "directionReverse": "Towards Howrah Maidan"
+    },
+    {
+      "id": "green_7_8",
+      "from": "green_7",
+      "to": "green_8",
+      "lineId": "green",
+      "status": "operational",
+      "directionForward": "Towards Salt Lake Sector V",
+      "directionReverse": "Towards Howrah Maidan"
+    },
+    {
+      "id": "green_8_9",
+      "from": "green_8",
+      "to": "green_9",
+      "lineId": "green",
+      "status": "operational",
+      "directionForward": "Towards Salt Lake Sector V",
+      "directionReverse": "Towards Howrah Maidan"
+    },
+    {
+      "id": "green_9_10",
+      "from": "green_9",
+      "to": "green_10",
+      "lineId": "green",
+      "status": "operational",
+      "directionForward": "Towards Salt Lake Sector V",
+      "directionReverse": "Towards Howrah Maidan"
+    },
+    {
+      "id": "green_10_11",
+      "from": "green_10",
+      "to": "green_11",
+      "lineId": "green",
+      "status": "operational",
+      "directionForward": "Towards Salt Lake Sector V",
+      "directionReverse": "Towards Howrah Maidan"
+    },
+    {
+      "id": "purple_0_1",
+      "from": "purple_0",
+      "to": "purple_1",
+      "lineId": "purple",
+      "status": "operational",
+      "directionForward": "Towards Majerhat",
+      "directionReverse": "Towards Joka"
+    },
+    {
+      "id": "purple_1_2",
+      "from": "purple_1",
+      "to": "purple_2",
+      "lineId": "purple",
+      "status": "operational",
+      "directionForward": "Towards Majerhat",
+      "directionReverse": "Towards Joka"
+    },
+    {
+      "id": "purple_2_3",
+      "from": "purple_2",
+      "to": "purple_3",
+      "lineId": "purple",
+      "status": "operational",
+      "directionForward": "Towards Majerhat",
+      "directionReverse": "Towards Joka"
+    },
+    {
+      "id": "purple_3_4",
+      "from": "purple_3",
+      "to": "purple_4",
+      "lineId": "purple",
+      "status": "operational",
+      "directionForward": "Towards Majerhat",
+      "directionReverse": "Towards Joka"
+    },
+    {
+      "id": "purple_4_5",
+      "from": "purple_4",
+      "to": "purple_5",
+      "lineId": "purple",
+      "status": "operational",
+      "directionForward": "Towards Majerhat",
+      "directionReverse": "Towards Joka"
+    },
+    {
+      "id": "purple_5_6",
+      "from": "purple_5",
+      "to": "purple_6",
+      "lineId": "purple",
+      "status": "operational",
+      "directionForward": "Towards Majerhat",
+      "directionReverse": "Towards Joka"
+    },
+    {
+      "id": "orange_0_1",
+      "from": "hub_kavi_subhash_orange",
+      "to": "orange_1",
+      "lineId": "orange",
+      "status": "operational",
+      "directionForward": "Towards Beleghata",
+      "directionReverse": "Towards Kavi Subhash"
+    },
+    {
+      "id": "orange_1_2",
+      "from": "orange_1",
+      "to": "orange_2",
+      "lineId": "orange",
+      "status": "operational",
+      "directionForward": "Towards Beleghata",
+      "directionReverse": "Towards Kavi Subhash"
+    },
+    {
+      "id": "orange_2_3",
+      "from": "orange_2",
+      "to": "orange_3",
+      "lineId": "orange",
+      "status": "operational",
+      "directionForward": "Towards Beleghata",
+      "directionReverse": "Towards Kavi Subhash"
+    },
+    {
+      "id": "orange_3_4",
+      "from": "orange_3",
+      "to": "orange_4",
+      "lineId": "orange",
+      "status": "operational",
+      "directionForward": "Towards Beleghata",
+      "directionReverse": "Towards Kavi Subhash"
+    },
+    {
+      "id": "orange_4_5",
+      "from": "orange_4",
+      "to": "orange_5",
+      "lineId": "orange",
+      "status": "operational",
+      "directionForward": "Towards Beleghata",
+      "directionReverse": "Towards Kavi Subhash"
+    },
+    {
+      "id": "orange_5_6",
+      "from": "orange_5",
+      "to": "orange_6",
+      "lineId": "orange",
+      "status": "operational",
+      "directionForward": "Towards Beleghata",
+      "directionReverse": "Towards Kavi Subhash"
+    },
+    {
+      "id": "orange_6_7",
+      "from": "orange_6",
+      "to": "orange_7",
+      "lineId": "orange",
+      "status": "operational",
+      "directionForward": "Towards Beleghata",
+      "directionReverse": "Towards Kavi Subhash"
+    },
+    {
+      "id": "orange_7_8",
+      "from": "orange_7",
+      "to": "orange_8",
+      "lineId": "orange",
+      "status": "operational",
+      "directionForward": "Towards Beleghata",
+      "directionReverse": "Towards Kavi Subhash"
+    },
+    {
+      "id": "yellow_0_1",
+      "from": "hub_noapara_yellow",
+      "to": "yellow_1",
+      "lineId": "yellow",
+      "status": "operational",
+      "directionForward": "Towards Jai Hind Bimanbandar",
+      "directionReverse": "Towards Noapara"
+    },
+    {
+      "id": "yellow_1_2",
+      "from": "yellow_1",
+      "to": "yellow_2",
+      "lineId": "yellow",
+      "status": "operational",
+      "directionForward": "Towards Jai Hind Bimanbandar",
+      "directionReverse": "Towards Noapara"
+    },
+    {
+      "id": "yellow_2_3",
+      "from": "yellow_2",
+      "to": "yellow_3",
+      "lineId": "yellow",
+      "status": "operational",
+      "directionForward": "Towards Jai Hind Bimanbandar",
+      "directionReverse": "Towards Noapara"
+    }
+  ],
+  "transfers": [
+    {
+      "id": "x_noapara_blue_yellow",
+      "stationA": "hub_noapara_blue",
+      "stationB": "hub_noapara_yellow",
+      "status": "operational",
+      "walkMinutes": null,
+      "instructions": [],
+      "source": "Metro Railway network interchange; verify on-site signage",
+      "verifiedAt": "2026-11-18"
+    },
+    {
+      "id": "x_esplanade_blue_green",
+      "stationA": "hub_esplanade_blue",
+      "stationB": "hub_esplanade_green",
+      "status": "operational",
+      "walkMinutes": null,
+      "instructions": [],
+      "source": "Metro Railway network interchange; verify on-site signage",
+      "verifiedAt": "2026-11-18"
+    },
+    {
+      "id": "x_kavi_blue_orange",
+      "stationA": "hub_kavi_subhash_blue",
+      "stationB": "hub_kavi_subhash_orange",
+      "status": "unverified",
+      "walkMinutes": null,
+      "instructions": [],
+      "source": "Interchange availability must be rechecked against current station operations",
+      "verifiedAt": "2026-11-18"
+    }
+  ],
+  "metadata": {
+    "coordinatesVerified": false,
+    "faresVerified": false,
+    "journeyTimesVerified": false,
+    "platformAndWalkingInstructionsVerified": false,
+    "sources": [
+      "https://mtp.indianrailways.gov.in/ministry/about-us",
+      "https://mtp.indianrailways.gov.in/uploads/files/1709892050820-DMM%20MRK%202024.pdf",
+      "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2314574",
+      "https://sansad.in/getFile/loksabhaquestions/annex/187/AU6118_nVe1vc.pdf?source=pqals"
+    ]
+  }
+}
