@@ -1,0 +1,924 @@
+{
+ "schema": 2,
+ "meta": {
+  "name": "Kolkata Metro starter network",
+  "asOf": "2026-11-18",
+  "summary": "Operational stations and lines as listed publicly, with suspended sections flagged. Not an official feed.",
+  "sources": [
+   "Wikipedia: List of Kolkata Metro stations (operational list, accessed 18 Nov 2026)",
+   "Wikipedia: Kavi Subhash metro station and Blue Line (closure since 28 Jul 2025)",
+   "kolkatametro.org Blue Line page (no reopening date announced as of Sep 2026)"
+  ],
+  "caveats": [
+   "No live service, fares, timings or platform numbers are included.",
+   "Coordinates are approximate and omitted where a public listing looked wrong.",
+   "Check official Metro Railway Kolkata notices before travelling."
+  ]
+ },
+ "lines": [
+  {
+   "id": "blue",
+   "name": "Blue Line",
+   "code": "Line 1",
+   "color": "#1F5FFF",
+   "ink": "#0B2A8A",
+   "stations": [
+    "dakshineswar",
+    "baranagar",
+    "noapara",
+    "dum-dum",
+    "belgachhia",
+    "shyambazar",
+    "shobhabazar-sutanuti",
+    "girish-park",
+    "mahatma-gandhi-road",
+    "central",
+    "chandni-chowk",
+    "esplanade",
+    "park-street",
+    "maidan",
+    "rabindra-sadan",
+    "netaji-bhavan",
+    "jatin-das-park",
+    "kalighat",
+    "rabindra-sarobar",
+    "mahanayak-uttam-kumar",
+    "netaji",
+    "masterda-surya-sen",
+    "gitanjali",
+    "kavi-nazrul",
+    "shahid-khudiram",
+    "kavi-subhash"
+   ],
+   "corridor": "North–South",
+   "sections": [
+    {
+     "to": "kavi-subhash",
+     "status": "suspended",
+     "since": "2025-07-28",
+     "note": "Blue Line platforms at Kavi Subhash have been closed since 28 July 2025 after cracks were found in supporting piers. Trains terminate at Shahid Khudiram. No reopening date had been announced as of September 2026.",
+     "from": "shahid-khudiram"
+    }
+   ]
+  },
+  {
+   "id": "green",
+   "name": "Green Line",
+   "code": "Line 2",
+   "color": "#0E9F5A",
+   "ink": "#065F36",
+   "stations": [
+    "howrah-maidan",
+    "howrah",
+    "mahakaran",
+    "esplanade",
+    "sealdah",
+    "phoolbagan",
+    "salt-lake-stadium",
+    "bengal-chemical",
+    "city-centre",
+    "central-park",
+    "karunamoyee",
+    "salt-lake-sector-v"
+   ],
+   "corridor": "East–West",
+   "sections": []
+  },
+  {
+   "id": "purple",
+   "name": "Purple Line",
+   "code": "Line 3",
+   "color": "#8B3FD9",
+   "ink": "#4C1D95",
+   "stations": [
+    "joka",
+    "thakurpukur",
+    "sakherbazar",
+    "behala-chowrasta",
+    "behala-bazar",
+    "taratala",
+    "majerhat"
+   ],
+   "corridor": "Joka–Majerhat",
+   "sections": []
+  },
+  {
+   "id": "yellow",
+   "name": "Yellow Line",
+   "code": "Line 4",
+   "color": "#F2B100",
+   "ink": "#7A5A00",
+   "stations": [
+    "noapara",
+    "dum-dum-cantonment",
+    "jessore-road",
+    "jai-hind"
+   ],
+   "corridor": "Noapara–Airport",
+   "sections": []
+  },
+  {
+   "id": "orange",
+   "name": "Orange Line",
+   "code": "Line 6",
+   "color": "#F26A1B",
+   "ink": "#8A3300",
+   "stations": [
+    "kavi-subhash",
+    "satyajit-ray",
+    "jyotirindra-nandi",
+    "kavi-sukanta",
+    "hemanta-mukhopadhyay",
+    "vip-bazar",
+    "ritwik-ghatak",
+    "barun-sengupta",
+    "beleghata"
+   ],
+   "corridor": "New Garia–Beleghata",
+   "sections": []
+  }
+ ],
+ "stations": [
+  {
+   "id": "dakshineswar",
+   "name": "Dakshineswar",
+   "aliases": [
+    "Sri Ramakrishna"
+   ],
+   "lines": [
+    "blue"
+   ],
+   "geo": {
+    "lat": 22.653971,
+    "lng": 88.363724
+   }
+  },
+  {
+   "id": "baranagar",
+   "name": "Baranagar",
+   "aliases": [
+    "Swami Vivekananda"
+   ],
+   "lines": [
+    "blue"
+   ],
+   "geo": {
+    "lat": 22.653529,
+    "lng": 88.378873
+   }
+  },
+  {
+   "id": "noapara",
+   "name": "Noapara",
+   "aliases": [
+    "Maa Sarada"
+   ],
+   "lines": [
+    "blue",
+    "yellow"
+   ],
+   "geo": {
+    "lat": 22.63972,
+    "lng": 88.39389
+   }
+  },
+  {
+   "id": "dum-dum",
+   "name": "Dum Dum",
+   "aliases": [],
+   "lines": [
+    "blue"
+   ],
+   "geo": {
+    "lat": 22.62111,
+    "lng": 88.39278
+   },
+   "railConnections": [
+    "Dum Dum Junction railway station"
+   ]
+  },
+  {
+   "id": "belgachhia",
+   "name": "Belgachhia",
+   "aliases": [
+    "Belgachia"
+   ],
+   "lines": [
+    "blue"
+   ],
+   "geo": {
+    "lat": 22.60583,
+    "lng": 88.38639
+   }
+  },
+  {
+   "id": "shyambazar",
+   "name": "Shyambazar",
+   "aliases": [
+    "Shyam Bazar"
+   ],
+   "lines": [
+    "blue"
+   ],
+   "geo": {
+    "lat": 22.601313,
+    "lng": 88.372586
+   }
+  },
+  {
+   "id": "shobhabazar-sutanuti",
+   "name": "Shobhabazar Sutanuti",
+   "aliases": [
+    "Hatkhola"
+   ],
+   "lines": [
+    "blue"
+   ],
+   "geo": {
+    "lat": 22.596029,
+    "lng": 88.365285
+   }
+  },
+  {
+   "id": "girish-park",
+   "name": "Girish Park",
+   "aliases": [
+    "Jorasanko"
+   ],
+   "lines": [
+    "blue"
+   ],
+   "geo": {
+    "lat": 22.587143,
+    "lng": 88.363083
+   }
+  },
+  {
+   "id": "mahatma-gandhi-road",
+   "name": "Mahatma Gandhi Road",
+   "aliases": [
+    "Mahajati Sadan",
+    "Chittaranjan Avenue",
+    "MG Road"
+   ],
+   "lines": [
+    "blue"
+   ],
+   "geo": {
+    "lat": 22.580858,
+    "lng": 88.361401
+   }
+  },
+  {
+   "id": "central",
+   "name": "Central",
+   "aliases": [
+    "Bepin Behari Ganguly Street"
+   ],
+   "lines": [
+    "blue"
+   ],
+   "geo": {
+    "lat": 22.57247,
+    "lng": 88.358788
+   }
+  },
+  {
+   "id": "chandni-chowk",
+   "name": "Chandni Chowk",
+   "aliases": [
+    "Ganesh Chandra Avenue"
+   ],
+   "lines": [
+    "blue"
+   ],
+   "geo": {
+    "lat": 22.566796,
+    "lng": 88.354137
+   }
+  },
+  {
+   "id": "esplanade",
+   "name": "Esplanade",
+   "aliases": [
+    "Dharmatala"
+   ],
+   "lines": [
+    "blue",
+    "green"
+   ],
+   "geo": {
+    "lat": 22.56444,
+    "lng": 88.35167
+   }
+  },
+  {
+   "id": "park-street",
+   "name": "Park Street",
+   "aliases": [
+    "Mother Teresa"
+   ],
+   "lines": [
+    "blue"
+   ],
+   "geo": {
+    "lat": 22.555,
+    "lng": 88.35028
+   }
+  },
+  {
+   "id": "maidan",
+   "name": "Maidan",
+   "aliases": [
+    "Gostho Pal"
+   ],
+   "lines": [
+    "blue"
+   ],
+   "geo": {
+    "lat": 22.54944,
+    "lng": 88.34889
+   }
+  },
+  {
+   "id": "rabindra-sadan",
+   "name": "Rabindra Sadan",
+   "aliases": [
+    "Exide"
+   ],
+   "lines": [
+    "blue"
+   ],
+   "geo": {
+    "lat": 22.54139,
+    "lng": 88.34722
+   }
+  },
+  {
+   "id": "netaji-bhavan",
+   "name": "Netaji Bhavan",
+   "aliases": [
+    "Bhawanipore"
+   ],
+   "lines": [
+    "blue"
+   ],
+   "geo": {
+    "lat": 22.53333,
+    "lng": 88.34611
+   }
+  },
+  {
+   "id": "jatin-das-park",
+   "name": "Jatin Das Park",
+   "aliases": [
+    "Hazra"
+   ],
+   "lines": [
+    "blue"
+   ],
+   "geo": {
+    "lat": 22.524262,
+    "lng": 88.346489
+   }
+  },
+  {
+   "id": "kalighat",
+   "name": "Kalighat",
+   "aliases": [],
+   "lines": [
+    "blue"
+   ],
+   "geo": {
+    "lat": 22.516652,
+    "lng": 88.346003
+   }
+  },
+  {
+   "id": "rabindra-sarobar",
+   "name": "Rabindra Sarobar",
+   "aliases": [
+    "Dhakuria",
+    "Charu Market"
+   ],
+   "lines": [
+    "blue"
+   ],
+   "geo": {
+    "lat": 22.50722,
+    "lng": 88.34556
+   }
+  },
+  {
+   "id": "mahanayak-uttam-kumar",
+   "name": "Mahanayak Uttam Kumar",
+   "aliases": [
+    "Tollygunge"
+   ],
+   "lines": [
+    "blue"
+   ],
+   "geo": {
+    "lat": 22.49472,
+    "lng": 88.345
+   }
+  },
+  {
+   "id": "netaji",
+   "name": "Netaji",
+   "aliases": [
+    "Kudghat"
+   ],
+   "lines": [
+    "blue"
+   ],
+   "geo": {
+    "lat": 22.480976,
+    "lng": 88.346
+   }
+  },
+  {
+   "id": "masterda-surya-sen",
+   "name": "Masterda Surya Sen",
+   "aliases": [
+    "Bansdroni"
+   ],
+   "lines": [
+    "blue"
+   ],
+   "geo": {
+    "lat": 22.473521,
+    "lng": 88.360871
+   }
+  },
+  {
+   "id": "gitanjali",
+   "name": "Gitanjali",
+   "aliases": [
+    "Naktala"
+   ],
+   "lines": [
+    "blue"
+   ]
+  },
+  {
+   "id": "kavi-nazrul",
+   "name": "Kavi Nazrul",
+   "aliases": [
+    "Garia Bazar"
+   ],
+   "lines": [
+    "blue"
+   ]
+  },
+  {
+   "id": "shahid-khudiram",
+   "name": "Shahid Khudiram",
+   "aliases": [
+    "Dhalai Bridge",
+    "Briji"
+   ],
+   "lines": [
+    "blue"
+   ],
+   "geo": {
+    "lat": 22.4660301,
+    "lng": 88.3915624
+   }
+  },
+  {
+   "id": "kavi-subhash",
+   "name": "Kavi Subhash",
+   "aliases": [
+    "New Garia"
+   ],
+   "lines": [
+    "blue",
+    "orange"
+   ],
+   "geo": {
+    "lat": 22.47194,
+    "lng": 88.39806
+   },
+   "railConnections": [
+    "New Garia railway station"
+   ]
+  },
+  {
+   "id": "howrah-maidan",
+   "name": "Howrah Maidan",
+   "aliases": [],
+   "lines": [
+    "green"
+   ],
+   "geo": {
+    "lat": 22.581998,
+    "lng": 88.332994
+   }
+  },
+  {
+   "id": "howrah",
+   "name": "Howrah",
+   "aliases": [
+    "Howrah Station"
+   ],
+   "lines": [
+    "green"
+   ],
+   "geo": {
+    "lat": 22.584454,
+    "lng": 88.340578
+   },
+   "railConnections": [
+    "Howrah railway station"
+   ]
+  },
+  {
+   "id": "mahakaran",
+   "name": "Mahakaran",
+   "aliases": [],
+   "lines": [
+    "green"
+   ],
+   "geo": {
+    "lat": 22.571189,
+    "lng": 88.350106
+   }
+  },
+  {
+   "id": "sealdah",
+   "name": "Sealdah",
+   "aliases": [],
+   "lines": [
+    "green"
+   ],
+   "geo": {
+    "lat": 22.567207,
+    "lng": 88.371497
+   },
+   "railConnections": [
+    "Sealdah railway station"
+   ]
+  },
+  {
+   "id": "phoolbagan",
+   "name": "Phoolbagan",
+   "aliases": [],
+   "lines": [
+    "green"
+   ],
+   "geo": {
+    "lat": 22.57214,
+    "lng": 88.390282
+   }
+  },
+  {
+   "id": "salt-lake-stadium",
+   "name": "Salt Lake Stadium",
+   "aliases": [],
+   "lines": [
+    "green"
+   ],
+   "geo": {
+    "lat": 22.57306,
+    "lng": 88.40306
+   }
+  },
+  {
+   "id": "bengal-chemical",
+   "name": "Bengal Chemical",
+   "aliases": [
+    "Acharya Prafulla Chandra Ray"
+   ],
+   "lines": [
+    "green"
+   ],
+   "geo": {
+    "lat": 22.580076,
+    "lng": 88.401283
+   }
+  },
+  {
+   "id": "city-centre",
+   "name": "City Centre",
+   "aliases": [
+    "City Center"
+   ],
+   "lines": [
+    "green"
+   ],
+   "geo": {
+    "lat": 22.587069,
+    "lng": 88.407875
+   }
+  },
+  {
+   "id": "central-park",
+   "name": "Central Park",
+   "aliases": [],
+   "lines": [
+    "green"
+   ],
+   "geo": {
+    "lat": 22.590437,
+    "lng": 88.415605
+   }
+  },
+  {
+   "id": "karunamoyee",
+   "name": "Karunamoyee",
+   "aliases": [],
+   "lines": [
+    "green"
+   ],
+   "geo": {
+    "lat": 22.586435,
+    "lng": 88.421515
+   }
+  },
+  {
+   "id": "salt-lake-sector-v",
+   "name": "Salt Lake Sector V",
+   "aliases": [
+    "Sector 5",
+    "Sector-V"
+   ],
+   "lines": [
+    "green"
+   ],
+   "geo": {
+    "lat": 22.581318,
+    "lng": 88.429822
+   }
+  },
+  {
+   "id": "joka",
+   "name": "Joka",
+   "aliases": [
+    "Diamond Park"
+   ],
+   "lines": [
+    "purple"
+   ],
+   "geo": {
+    "lat": 22.452244,
+    "lng": 88.301751
+   }
+  },
+  {
+   "id": "thakurpukur",
+   "name": "Thakurpukur",
+   "aliases": [],
+   "lines": [
+    "purple"
+   ],
+   "geo": {
+    "lat": 22.464261,
+    "lng": 88.307555
+   }
+  },
+  {
+   "id": "sakherbazar",
+   "name": "Sakherbazar",
+   "aliases": [
+    "Silpara"
+   ],
+   "lines": [
+    "purple"
+   ],
+   "geo": {
+    "lat": 22.474611,
+    "lng": 88.309991
+   }
+  },
+  {
+   "id": "behala-chowrasta",
+   "name": "Behala Chowrasta",
+   "aliases": [],
+   "lines": [
+    "purple"
+   ],
+   "geo": {
+    "lat": 22.487529,
+    "lng": 88.313426
+   }
+  },
+  {
+   "id": "behala-bazar",
+   "name": "Behala Bazar",
+   "aliases": [],
+   "lines": [
+    "purple"
+   ],
+   "geo": {
+    "lat": 22.498929,
+    "lng": 88.317354
+   }
+  },
+  {
+   "id": "taratala",
+   "name": "Taratala",
+   "aliases": [
+    "Pathakpara"
+   ],
+   "lines": [
+    "purple"
+   ],
+   "geo": {
+    "lat": 22.508165,
+    "lng": 88.320563
+   }
+  },
+  {
+   "id": "majerhat",
+   "name": "Majerhat",
+   "aliases": [],
+   "lines": [
+    "purple"
+   ],
+   "geo": {
+    "lat": 22.5191,
+    "lng": 88.3234
+   }
+  },
+  {
+   "id": "dum-dum-cantonment",
+   "name": "Dum Dum Cantonment",
+   "aliases": [],
+   "lines": [
+    "yellow"
+   ],
+   "geo": {
+    "lat": 22.638,
+    "lng": 88.4123
+   }
+  },
+  {
+   "id": "jessore-road",
+   "name": "Jessore Road",
+   "aliases": [],
+   "lines": [
+    "yellow"
+   ],
+   "geo": {
+    "lat": 22.6395137,
+    "lng": 88.4297765
+   }
+  },
+  {
+   "id": "jai-hind",
+   "name": "Jai Hind",
+   "aliases": [
+    "Biman Bandar",
+    "Bimanbandar",
+    "Airport",
+    "Kolkata Airport"
+   ],
+   "lines": [
+    "yellow"
+   ],
+   "geo": {
+    "lat": 22.64619,
+    "lng": 88.43591
+   }
+  },
+  {
+   "id": "satyajit-ray",
+   "name": "Satyajit Ray",
+   "aliases": [
+    "Chak Garia",
+    "Ajoy Nagar"
+   ],
+   "lines": [
+    "orange"
+   ],
+   "geo": {
+    "lat": 22.4846,
+    "lng": 88.3926
+   }
+  },
+  {
+   "id": "jyotirindra-nandi",
+   "name": "Jyotirindra Nandi",
+   "aliases": [
+    "Singhbari"
+   ],
+   "lines": [
+    "orange"
+   ],
+   "geo": {
+    "lat": 22.495915,
+    "lng": 88.398667
+   }
+  },
+  {
+   "id": "kavi-sukanta",
+   "name": "Kavi Sukanta",
+   "aliases": [
+    "Avishikta More"
+   ],
+   "lines": [
+    "orange"
+   ],
+   "geo": {
+    "lat": 22.505262,
+    "lng": 88.400996
+   }
+  },
+  {
+   "id": "hemanta-mukhopadhyay",
+   "name": "Hemanta Mukhopadhyay",
+   "aliases": [
+    "Ruby More",
+    "Hemanta Mukherjee"
+   ],
+   "lines": [
+    "orange"
+   ],
+   "geo": {
+    "lat": 22.514777,
+    "lng": 88.401469
+   }
+  },
+  {
+   "id": "vip-bazar",
+   "name": "VIP Bazar",
+   "aliases": [],
+   "lines": [
+    "orange"
+   ],
+   "geo": {
+    "lat": 22.5255,
+    "lng": 88.39586
+   }
+  },
+  {
+   "id": "ritwik-ghatak",
+   "name": "Ritwik Ghatak",
+   "aliases": [
+    "Bantala Road",
+    "Uttar Panchannagram"
+   ],
+   "lines": [
+    "orange"
+   ],
+   "geo": {
+    "lat": 22.5328605,
+    "lng": 88.3957647
+   }
+  },
+  {
+   "id": "barun-sengupta",
+   "name": "Barun Sengupta",
+   "aliases": [
+    "Metropolitan",
+    "Dhapa"
+   ],
+   "lines": [
+    "orange"
+   ]
+  },
+  {
+   "id": "beleghata",
+   "name": "Beleghata",
+   "aliases": [
+    "Tangra"
+   ],
+   "lines": [
+    "orange"
+   ],
+   "geo": {
+    "lat": 22.550703,
+    "lng": 88.404094
+   }
+  }
+ ],
+ "interchanges": [
+  {
+   "station": "noapara",
+   "lines": [
+    "blue",
+    "yellow"
+   ],
+   "status": "open"
+  },
+  {
+   "station": "esplanade",
+   "lines": [
+    "blue",
+    "green"
+   ],
+   "status": "open"
+  },
+  {
+   "station": "kavi-subhash",
+   "lines": [
+    "blue",
+    "orange"
+   ],
+   "status": "suspended",
+   "since": "2025-07-28",
+   "note": "The Blue–Orange interchange cannot be used while the Blue Line platforms at Kavi Subhash are closed."
+  }
+ ]
+}

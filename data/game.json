@@ -1,0 +1,40 @@
+{
+  "ranks": [
+    { "min": 0,    "title": "Fresh ticket" },
+    { "min": 100,  "title": "Platform wanderer" },
+    { "min": 250,  "title": "Line reader" },
+    { "min": 500,  "title": "Interchange navigator" },
+    { "min": 850,  "title": "Network cartographer" },
+    { "min": 1300, "title": "Metro master" }
+  ],
+  "xp": {
+    "scout": 5,
+    "stamp": 15,
+    "plan": 10,
+    "ride": 10,
+    "trialBase": 15,
+    "trialPerStar": 10,
+    "lineRunBase": 10,
+    "lineRunPerStar": 10,
+    "dailyBase": 30,
+    "dailyStreakStep": 5,
+    "dailyStreakCap": 7
+  },
+  "missions": [
+    { "id": "first-plan",  "title": "First journey",        "text": "Plan a route between any two stations.",                         "type": "plans",            "target": 1, "xp": 25 },
+    { "id": "change",      "title": "Change of line",       "text": "Plan a route that needs at least one interchange.",             "type": "interchangePlans", "target": 1, "xp": 30 },
+    { "id": "five-routes", "title": "Route collector",      "text": "Plan five different routes.",                                    "type": "plans",            "target": 5, "xp": 40 },
+    { "id": "scout-5",     "title": "Scout five stations",  "text": "Select five different stations on the map.",                    "type": "scouted",          "target": 5, "xp": 20 },
+    { "id": "scout-20",    "title": "Scout twenty stations","text": "Select twenty different stations on the map.",                  "type": "scouted",          "target": 20, "xp": 50 },
+    { "id": "stamp-3",     "title": "Earn three stamps",    "text": "Answer station checks correctly to stamp them in your passport.","type": "stamped",          "target": 3, "xp": 35 },
+    { "id": "stamp-10",    "title": "Ten stamps",           "text": "Stamp ten stations.",                                            "type": "stamped",          "target": 10, "xp": 70 },
+    { "id": "hubs",        "title": "Find the hubs",        "text": "Scout all three interchange stations.",                         "type": "hubsScouted",      "target": 3, "xp": 40 },
+    { "id": "ride-1",      "title": "First ride",           "text": "Preview a ride from start to finish.",                           "type": "rides",            "target": 1, "xp": 20 },
+    { "id": "trial-1",     "title": "Pass a route trial",   "text": "Finish a route trial.",                                          "type": "trials",           "target": 1, "xp": 25 },
+    { "id": "trial-3star", "title": "Flawless navigator",   "text": "Finish a route trial with three stars.",                        "type": "trialStars3",      "target": 1, "xp": 40 },
+    { "id": "run-1",       "title": "Run a line",           "text": "Finish a line run.",                                             "type": "lineRuns",         "target": 1, "xp": 25 },
+    { "id": "run-clean",   "title": "Clean run",            "text": "Finish a line run with no mistakes.",                            "type": "cleanLineRuns",    "target": 1, "xp": 35 },
+    { "id": "daily-1",     "title": "Daily route",          "text": "Finish today's daily route.",                                    "type": "dailyDone",        "target": 1, "xp": 30 },
+    { "id": "streak-3",    "title": "Three-day streak",     "text": "Finish the daily route three days in a row.",                    "type": "dailyStreak",      "target": 3, "xp": 60 }
+  ]
+}
