@@ -1,0 +1,80 @@
+.map-svg { width: 100%; height: 100%; display: block; touch-action: none; cursor: grab; user-select: none; -webkit-user-select: none; }
+.map-svg.dragging { cursor: grabbing; }
+.chart { fill: var(--paper); }
+.grid-line { fill: none; stroke: rgba(16, 23, 61, .07); stroke-width: 1; }
+.river-wide { fill: none; stroke: var(--water); stroke-width: 58; stroke-linecap: round; opacity: .75; }
+.river-core { fill: none; stroke: #D5E7F0; stroke-width: 34; stroke-linecap: round; }
+.river-label { font: italic 400 22px var(--f-body); fill: #6B90A6; letter-spacing: .3em; }
+
+/* lines: ink casing keeps pale colours (yellow) readable on a pale map */
+.line { transition: opacity .3s; }
+.line-casing { fill: none; stroke: var(--ink); stroke-width: 11; stroke-linecap: round; stroke-linejoin: round; }
+.line-body { fill: none; stroke: var(--c); stroke-width: 6.5; stroke-linecap: round; stroke-linejoin: round; }
+.line-mask { fill: none; stroke: var(--paper); stroke-width: 13; stroke-linecap: butt; }
+.line-suspended { fill: none; stroke: var(--ink); stroke-width: 3; stroke-dasharray: 2 8; stroke-linecap: round; opacity: .7; }
+.line-focus .line:not(.focus) { opacity: .18; }
+
+/* opening sequence: lines draw themselves, stations pop in */
+.intro .line-casing, .intro .line-body { stroke-dasharray: 1; stroke-dashoffset: 1; animation: draw 1.4s cubic-bezier(.65, .05, .25, 1) forwards; animation-delay: calc(var(--i) * .2s); }
+.intro .line-mask, .intro .line-suspended { opacity: 0; animation: fade .4s 1.6s forwards; }
+.intro .station { opacity: 0; animation: fade .4s forwards; animation-delay: var(--d); }
+.intro .st-ring, .intro .st-dot { transform-box: fill-box; transform-origin: center; animation: pop .5s cubic-bezier(.2, 1.6, .4, 1) backwards; animation-delay: var(--d); }
+@keyframes draw { to { stroke-dashoffset: 0; } }
+@keyframes fade { to { opacity: 1; } }
+@keyframes pop { from { transform: scale(.2); } }
+
+.station { cursor: pointer; outline: none; transition: opacity .3s; }
+.hit { fill: transparent; }
+.st-ring { fill: var(--sheet); stroke: var(--ink); stroke-width: 2.6; transition: fill .3s, stroke .3s; }
+.st-dot { fill: transparent; transition: fill .3s; }
+.hub .st-ring { stroke-width: 3.6; fill: #fff; }
+.hub-suspended .st-ring { stroke: var(--stamp-ink); stroke-dasharray: 5 3.5; }
+.station.scouted .st-ring { fill: var(--c); }
+.station.hub.scouted .st-ring { fill: #fff; }
+.station.hub.scouted .st-dot { fill: var(--ink); }
+.st-stamp { fill: none; stroke: var(--stamp); stroke-width: 2.6; opacity: 0; transform-box: fill-box; transform-origin: center; transition: opacity .4s; }
+.station.stamped .st-stamp { opacity: 1; }
+.st-halo { fill: none; stroke: var(--stamp); stroke-width: 2; opacity: 0; transform-box: fill-box; transform-origin: center; }
+.station.selected .st-halo { opacity: 1; animation: halo 1.7s ease-out infinite; }
+.station:focus-visible .st-halo { opacity: 1; stroke: var(--ink); stroke-dasharray: 3 3; }
+.station:hover .st-ring { stroke: var(--stamp); }
+@keyframes halo { from { transform: scale(.8); opacity: 1; } to { transform: scale(1.8); opacity: 0; } }
+
+.lbl { font: 600 calc(13px * var(--ls, 1)) var(--f-body); fill: var(--ink-2); paint-order: stroke; stroke: var(--paper); stroke-width: calc(4px * var(--ls, 1)); stroke-linejoin: round; pointer-events: none; }
+.station.scouted .lbl { fill: var(--ink); font-weight: 700; }
+.hub .lbl { font-size: calc(15px * var(--ls, 1)); font-weight: 700; fill: var(--ink); }
+.map-svg[data-zoom="far"] .station:not(.lbl-always):not(.lbl-end):not(.selected):not(.on-route) .lbl { display: none; }
+.has-route .line { opacity: .3; }
+.has-route .station:not(.on-route):not(.selected) { opacity: .4; }
+
+.route-casing { fill: none; stroke: #fff; stroke-width: 17; stroke-linecap: round; stroke-linejoin: round; opacity: .96; }
+.route-ink { fill: none; stroke: var(--stamp); stroke-width: 7; stroke-linecap: round; stroke-linejoin: round; }
+.train-body { fill: var(--ink); stroke: #fff; stroke-width: 2; }
+.train-win { fill: #fff; }
+.train-nose { fill: var(--stamp); }
+.train.arrived { animation: bump .5s; }
+@keyframes bump { 50% { transform: scale(1.25); } }
+.amb-body { fill: var(--ink); stroke: #fff; stroke-width: 1.2; opacity: .72; }
+.calm .ambient { display: none; }
+.has-route .ambient { opacity: .25; }
+.station.passed .st-ring { stroke: var(--stamp); }
+
+.pin-disc { fill: var(--stamp); stroke: #fff; stroke-width: 3.5; }
+.pin-letter { font: 800 22px var(--f-display); fill: #fff; }
+.ping { fill: none; stroke: var(--stamp); stroke-width: 3; transform-box: fill-box; transform-origin: center; animation: ping .9s ease-out forwards; }
+@keyframes ping { from { transform: scale(1); opacity: .9; } to { transform: scale(4.2); opacity: 0; } }
+.stamp-fx-inner { transform-box: fill-box; transform-origin: center; animation: slam 2.1s cubic-bezier(.2, .9, .3, 1) forwards; }
+.stamp-disc { fill: rgba(200, 36, 59, .12); stroke: var(--stamp); stroke-width: 3.5; }
+.stamp-ring { fill: none; stroke: var(--stamp); stroke-width: 1.5; stroke-dasharray: 3 3; }
+.stamp-word { font: 800 15px var(--f-display); fill: var(--stamp); transform: rotate(-12deg); }
+@keyframes slam { 0% { transform: scale(3) rotate(-30deg); opacity: 0; } 16% { transform: scale(1) rotate(-12deg); opacity: 1; } 24% { transform: scale(1.08) rotate(-12deg); } 32% { transform: scale(1) rotate(-12deg); } 80% { opacity: 1; } 100% { transform: scale(1) rotate(-12deg); opacity: 0; } }
+.you-dot { fill: var(--ink); stroke: #fff; stroke-width: 3; }
+.you-pulse { fill: none; stroke: var(--ink); stroke-width: 2; transform-box: fill-box; transform-origin: center; animation: halo 1.6s ease-out infinite; }
+
+/* legend doubles as a line filter and a progress readout */
+.legend-item { display: inline-flex; align-items: center; gap: 8px; background: var(--sheet); border: 2px solid var(--ink); padding: 4px 10px 4px 0; font-weight: 700; font-size: .88rem; box-shadow: 2px 2px 0 var(--ink); white-space: nowrap; border-radius: 2px; transition: transform .12s, background .2s; }
+.legend-item:hover { transform: translate(-1px, -1px); }
+.legend-item .swatch { width: 12px; align-self: stretch; background: var(--c); border-right: 2px solid var(--ink); }
+.legend-count { font-weight: 400; color: var(--muted); font-variant-numeric: tabular-nums; }
+.legend-item.on, .legend-item[aria-pressed="true"] { background: var(--ink); color: #fff; }
+.legend-item.on .legend-count { color: #C9D0F5; }

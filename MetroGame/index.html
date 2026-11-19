@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>MetroGate Kolkata: explore the metro, plan your ride</title>
+  <meta name="description" content="An explorable Kolkata Metro map with a journey planner, passport stamps and short games that teach you the network.">
+  <meta name="theme-color" content="#10173D">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Big+Shoulders+Display:wght@600;800&display=swap">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/map.css">
+  <link rel="stylesheet" href="css/ui.css">
+  <script type="module" src="js/main.js"></script>
+</head>
+<body>
+  <a class="skip" href="#panel">Skip to the journey panel</a>
+  <header class="topbar">
+    <p class="wordmark">MetroGate<span>Kolkata</span></p>
+    <div class="rank" aria-label="Your rank">
+      <p class="rank-name" id="rank-title">Fresh ticket</p>
+      <div class="bar thin" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Progress to next rank"><i id="rank-bar"></i></div>
+      <p class="rank-xp" id="rank-xp">0 XP</p>
+    </div>
+    <div class="topbar-actions">
+      <button type="button" class="btn-text" id="motion-btn" aria-pressed="false">Trains: on</button>
+      <button type="button" class="btn-text" id="about-btn">About<span class="long"> the data</span></button>
+    </div>
+  </header>
+
+  <div class="shell">
+    <aside id="panel" class="panel" data-sheet="half" aria-label="Journey panel">
+      <button type="button" class="sheet-handle" id="sheet-handle">Expand</button>
+      <div class="tabs" role="tablist" aria-label="Sections">
+        <button role="tab" id="tab-plan" aria-controls="pane-plan" aria-selected="true">Plan</button>
+        <button role="tab" id="tab-play" aria-controls="pane-play" aria-selected="false" tabindex="-1">Play</button>
+        <button role="tab" id="tab-missions" aria-controls="pane-missions" aria-selected="false" tabindex="-1">Missions</button>
+        <button role="tab" id="tab-passport" aria-controls="pane-passport" aria-selected="false" tabindex="-1">Passport</button>
+      </div>
+      <div class="panes">
+        <section id="pane-plan" role="tabpanel" aria-labelledby="tab-plan" tabindex="-1"></section>
+        <section id="pane-play" role="tabpanel" aria-labelledby="tab-play" tabindex="-1" hidden></section>
+        <section id="pane-missions" role="tabpanel" aria-labelledby="tab-missions" tabindex="-1" hidden></section>
+        <section id="pane-passport" role="tabpanel" aria-labelledby="tab-passport" tabindex="-1" hidden></section>
+      </div>
+    </aside>
+
+    <main class="stage">
+      <div id="map" class="map"><p class="loading">Drawing the network</p></div>
+      <div class="legend" id="legend" role="group" aria-label="Lines. Select one to focus the map on it."></div>
+      <div class="map-controls" role="group" aria-label="Map controls">
+        <button type="button" id="zoom-in" aria-label="Zoom in">+</button>
+        <button type="button" id="zoom-out" aria-label="Zoom out">&minus;</button>
+        <button type="button" id="zoom-fit" aria-label="Fit the whole map">Fit</button>
+      </div>
+      <p class="zoom-note" id="zoom-note" hidden>Zoom in to read every station name.</p>
+      <div class="pick-banner" id="pick-banner" hidden><p id="pick-text"></p><button type="button" class="btn" id="pick-cancel">Cancel</button></div>
+      <section class="station-file" id="station-file" hidden aria-live="polite" aria-label="Station details"></section>
+    </main>
+  </div>
+
+  <div class="toasts" id="toasts" aria-live="polite"></div>
+  <noscript><p class="fatal">MetroGate needs JavaScript to draw the map and plan journeys.</p></noscript>
+</body>
+</html>
