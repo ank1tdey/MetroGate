@@ -5,9 +5,9 @@ const SUGGESTED = ['howrah', 'sealdah', 'esplanade', 'dum-dum', 'jai-hind', 'sal
 let uid = 0;
 
 /** Accessible station picker: type any current, local or former name. */
-export function createStationPicker({ net, label, hint, onChange }) {
+export function createStationPicker({ net, label, hint, onChange, onFocus }) {
   const id = `picker-${++uid}`;
-  let value = null; let active = -1; let results = [];
+  let value = null; let active = -1; let results = []; let touching = false;
   const input = h('input', { id, type: 'text', class: 'field-input', autocomplete: 'off', spellcheck: 'false', maxlength: 40, role: 'combobox', 'aria-autocomplete': 'list', 'aria-expanded': 'false', 'aria-controls': `${id}-list`, placeholder: 'Type a station or local name' });
   const list = h('ul', { id: `${id}-list`, class: 'combo-list', role: 'listbox', hidden: true, 'aria-label': `${label} suggestions` });
   const error = h('p', { class: 'field-error', id: `${id}-err`, role: 'alert' });
@@ -21,7 +21,8 @@ export function createStationPicker({ net, label, hint, onChange }) {
     items.forEach((s, i) => {
       const alias = (s.aliases ?? []).filter((a) => a.toLowerCase() !== s.name.toLowerCase()).slice(0, 2).join(', ');
       const li = h('li', { id: `${id}-o${i}`, role: 'option', class: 'combo-opt', 'aria-selected': 'false' }, bars(s), h('span', { class: 'combo-name' }, s.name), alias ? h('span', { class: 'combo-alias' }, `also ${alias}`) : null);
-      li.addEventListener('pointerdown', (e) => { e.preventDefault(); choose(s); });
+      li.addEventListener('mousedown', (e) => e.preventDefault()); // keep input focus on desktop
+      li.addEventListener('click', () => choose(s)); // a tap selects; a scroll gesture does not
       list.append(li);
     });
     list.hidden = items.length === 0; input.setAttribute('aria-expanded', String(items.length > 0));
@@ -32,9 +33,16 @@ export function createStationPicker({ net, label, hint, onChange }) {
     active = i; if (i >= 0) { input.setAttribute('aria-activedescendant', `${id}-o${i}`); list.children[i].scrollIntoView({ block: 'nearest' }); }
   }
   function choose(s) { value = s.id; input.value = stationLabel(s); error.textContent = ''; wrap.classList.remove('invalid'); close(); onChange?.(value); }
-  function suggestions() { const q = cleanQuery(input.value); return q ? net.search(q, 7) : SUGGESTED.map((x) => net.station(x)); }
+  function suggestions() {
+    const q = cleanQuery(input.value);
+    if (q) return net.search(q, 12);
+    const rest = net.stations.filter((x) => !SUGGESTED.includes(x.id)).sort((a, b) => a.name.localeCompare(b.name));
+    return [...SUGGESTED.map((x) => net.station(x)), ...rest];
+  }
 
-  input.addEventListener('focus', () => open(suggestions()));
+  list.addEventListener('touchstart', () => { touching = true; }, { passive: true });
+  list.addEventListener('touchend', () => { setTimeout(() => { touching = false; }, 300); }, { passive: true });
+  input.addEventListener('focus', () => { onFocus?.(); open(suggestions()); setTimeout(() => wrap.scrollIntoView({ block: 'start', behavior: 'smooth' }), 120); });
   input.addEventListener('input', () => { value = null; onChange?.(null); open(suggestions()); });
   input.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowDown') { e.preventDefault(); if (list.hidden) open(suggestions()); mark(Math.min(results.length - 1, active + 1)); }
@@ -43,6 +51,7 @@ export function createStationPicker({ net, label, hint, onChange }) {
     else if (e.key === 'Escape') close();
   });
   input.addEventListener('blur', () => {
+    if (touching) { input.focus({ preventScroll: true }); return; }
     close();
     const text = cleanQuery(input.value);
     if (!text || value) return;

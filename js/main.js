@@ -35,7 +35,7 @@ async function boot() {
   const setSheet = (s) => { panel.dataset.sheet = s; handle.textContent = s === 'peek' ? 'Show panel' : s === 'half' ? 'Expand' : 'Show map'; };
   handle.addEventListener('click', () => setSheet(panel.dataset.sheet === 'peek' ? 'half' : panel.dataset.sheet === 'half' ? 'full' : 'peek'));
   const mobile = () => matchMedia('(max-width: 819px), (max-width: 1000px) and (orientation: portrait)').matches;
-  app.sheetFor = (reason) => { if (!mobile()) return; setSheet(reason === 'station' ? 'peek' : 'half'); };
+  app.sheetFor = (reason) => { if (!mobile()) return; setSheet(reason === 'station' ? 'peek' : reason === 'input' ? 'full' : 'half'); };
   setSheet('half');
 
   // ----- tabs -----

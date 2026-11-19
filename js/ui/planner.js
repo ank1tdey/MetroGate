@@ -10,8 +10,8 @@ const plural = (n, a, b) => `${n} ${n === 1 ? a : b}`;
 export function createPlanner(app, host) {
   const { net, progress, map, toast } = app;
   const st = { from: null, to: null, include: false, result: null, sel: 0, tracker: null, location: null };
-  const from = createStationPicker({ net, label: 'From', onChange: (id) => { st.from = id; } });
-  const to = createStationPicker({ net, label: 'To', onChange: (id) => { st.to = id; } });
+  const from = createStationPicker({ net, label: 'From', onFocus: () => app.sheetFor('input'), onChange: (id) => { st.from = id; } });
+  const to = createStationPicker({ net, label: 'To', onFocus: () => app.sheetFor('input'), onChange: (id) => { st.to = id; } });
   const pickBtn = (which) => h('button', { type: 'button', class: 'btn-text', onClick: () => app.startPick(which) }, 'Choose on map');
   const swap = h('button', { type: 'button', class: 'btn-text', onClick: () => { const a = st.from; const b = st.to; from.set(b); to.set(a); } }, 'Swap');
   const incl = h('input', { type: 'checkbox', id: 'incl-susp', onChange: (e) => { st.include = e.target.checked; if (st.from && st.to) plan(); } });

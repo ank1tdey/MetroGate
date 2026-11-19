@@ -49,7 +49,7 @@
   .stage { grid-column: 1; grid-row: 1; }
   .panel { position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; border-right: 0; border-top: 3px solid var(--ink); box-shadow: 0 -6px 0 rgba(16, 23, 61, .12); transition: height .38s cubic-bezier(.2, .8, .2, 1); padding-bottom: env(safe-area-inset-bottom); }
   .panel[data-sheet="peek"] { height: calc(96px + env(safe-area-inset-bottom)); }
-  .panel[data-sheet="half"] { height: 50dvh; }
+  .panel[data-sheet="half"] { height: 62dvh; }
   .panel[data-sheet="full"] { height: calc(100dvh - var(--bar-h)); }
   .panel[data-sheet="peek"] .panes { display: none; }
   .sheet-handle { display: block; width: 100%; background: var(--sheet); border: 0; border-bottom: 1px solid var(--rule); padding: 6px; font-weight: 700; font-size: .85rem; color: var(--ink-2); }
@@ -61,5 +61,8 @@
   .zoom-note { bottom: 112px; }
   .toasts { right: 8px; left: 8px; justify-items: center; bottom: 108px; }
   .panes { padding: 16px 16px 32px; }
-  .pane-title { font-size: 2.1rem; }
+  .pane-title { font-size: 1.8rem; margin-bottom: 6px; }
+  #pane-plan .lede { display: none; }
+  .plan-form { gap: 2px; }
+  .swap-row { margin-top: -6px; }
 }
