@@ -12,6 +12,7 @@ export function createAbout(app) {
     h('h3', null, 'What is not included'), h('ul', null, net.meta.caveats.map((s) => h('li', null, s))),
     h('h3', null, 'Privacy'),
     h('p', null, 'No account, no tracking and no server. Your progress is stored in this browser only. Location is never requested unless you press the location button while tracking a ride, and it is never saved or sent anywhere.'),
+    h('p', { class: 'fine' }, 'Version 1.1, build 4.'),
     h('p', { class: 'fine' }, 'MetroGate is an independent project, not affiliated with Metro Railway, Kolkata.'),
     close);
   dlg.addEventListener('click', (e) => { if (e.target === dlg) dlg.close(); });
