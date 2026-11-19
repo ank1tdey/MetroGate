@@ -10,13 +10,13 @@
 .topbar .btn-text:hover { color: #FFB9C2; }
 
 .shell { display: grid; grid-template-columns: var(--panel-w) minmax(0, 1fr); min-height: 0; }
-.panel { display: flex; flex-direction: column; min-height: 0; background: var(--sheet); border-right: 3px solid var(--ink); position: relative; z-index: 5; }
+.panel { display: flex; flex-direction: column; min-height: 0; overflow: hidden; background: var(--sheet); border-right: 3px solid var(--ink); position: relative; z-index: 5; }
 .sheet-handle { display: none; }
 .tabs { display: flex; border-bottom: 2px solid var(--ink); background: var(--paper); }
 .tabs button { flex: 1; background: none; border: 0; padding: 12px 4px 10px; font: 700 1.25rem/1 var(--f-display); color: var(--muted); border-bottom: 5px solid transparent; margin-bottom: -2px; transition: color .15s, border-color .15s, background .15s; }
 .tabs button:hover { color: var(--ink); background: rgba(255, 255, 255, .6); }
 .tabs button[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--stamp); background: var(--sheet); }
-.panes { flex: 1; overflow-y: auto; overscroll-behavior: contain; padding: 20px 20px 40px; scroll-behavior: smooth; }
+.panes { flex: 1 1 0; min-height: 0; overflow-y: auto; -webkit-overflow-scrolling: touch; touch-action: pan-y; overscroll-behavior: contain; padding: 20px 20px 40px; scroll-behavior: smooth; }
 .panes > section { animation: enter .35s cubic-bezier(.2, .8, .2, 1); }
 @keyframes enter { from { opacity: 0; transform: translateY(10px); } }
 .pane-title { font: 800 2.5rem/.95 var(--f-display); margin-bottom: 10px; }
